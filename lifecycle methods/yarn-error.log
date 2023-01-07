@@ -1,0 +1,53 @@
+Arguments: 
+  /usr/local/bin/node /Users/zayalexey/.yarn/bin/yarn.js
+
+PATH: 
+  /Users/zayalexey/.yarn/bin:/Users/zayalexey/.config/yarn/global/node_modules/.bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/zayalexey/.yarn/bin:/Users/zayalexey/.config/yarn/global/node_modules/.bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Users/zayalexey/.cargo/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+
+npm manifest: 
+  {
+    "name": "lifecycle",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build-did-mount": "./node_modules/.bin/babel did-mount/src -d did-mount/public -w",
+      "build-logger": "./node_modules/.bin/babel logger/src -d logger/public -w",
+      "build-note": "./node_modules/.bin/babel note/src -d note/public -w",
+      "build-users": "./node_modules/.bin/babel users/src -d users/public -w",
+      "build": "npm run build-did-mount & npm run build-logger & npm run build-note & npm run build-users"
+    },
+    "keywords": [
+      "react.js"
+    ],
+    "license": "MIT",
+    "babel": {
+      "presets": [
+        "react"
+      ]
+    },
+    "devDependencies": {
+      "babel-cli": "6.24.1",
+      "babel-preset-react": "6.24.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
